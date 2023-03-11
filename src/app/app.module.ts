@@ -1,11 +1,16 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CrudoperationsComponent } from './crudoperations/crudoperations.component';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { ParentComponent } from './parent/parent.component';
+import { UserService } from './user.service';
 
 
 @NgModule({
@@ -18,9 +23,19 @@ import { ParentComponent } from './parent/parent.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      timeOut:3000,
+      progressBar:true,
+      progressAnimation:'increasing',
+      positionClass:'toast-top-right'
+    }),
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
