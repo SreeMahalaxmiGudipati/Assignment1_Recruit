@@ -1,2 +1,39 @@
+<div class="register-container">
+    <h1>Student Details</h1>
 
-<p>list works!</p>
+    <table class="table">
+        <thead>
+        <tr>
+              <th>      ID  </th>
+                <th>    Name  </th>
+                 <th>   Contact No  </th>
+                <th>    Recruit Status </th>
+                <th>   Designation  </th>
+                <th>    Experience </th>
+                <th>    Update </th>
+                <th>    Delete </th>
+              
+               
+        </tr>
+        </thead>
+    
+        <tbody>
+                <tr *ngFor="let StudentItem of data; let j=index">
+                   <td>{{StudentItem.id}}</td>
+                    <td>{{ StudentItem.name }}</td>
+                    <td>{{ StudentItem.phone }}</td>
+                    <td>{{ StudentItem.recruitstatus }}</td> 
+                    <td>{{ StudentItem.designation }}</td> 
+                    <td>{{ StudentItem.experiencenoofyears }}</td> 
+                    
+                  <td>
+                    <button type="button" class="btn btn-success">Update</button></td>
+                <td> <button type="button" class="btn btn-danger" (click)="DeleteStudentinfo(StudentItem.id)">Delete</button></td>   
+                
+                  
+                </tr>
+        </tbody>
+    
+    </table>
+
+</div>
