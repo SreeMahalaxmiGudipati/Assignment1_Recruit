@@ -113,4 +113,23 @@ export class ListComponent implements OnInit{
     this.data.sort(this.sortByStatus);
    }
 
+   //sorting data by Number of years experience
+  sortByExpereince(a:any,b:any)
+  {
+    const Aexp=parseInt(a.experiencenoofyears);
+    const Bexp=parseInt(b.experiencenoofyears);
+      if(Aexp < Bexp){
+        return -1;
+      }
+      if(Aexp < Bexp){
+        return 1;
+      }
+      return 0;
+   }
+   
+   OnSortByExpereince()
+   {
+    this.data.sort(this.sortByExpereince);
+   }
+
 }
