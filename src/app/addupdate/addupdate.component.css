@@ -1,8 +1,10 @@
+.Register-employee{
+    padding-left: 5%;
+}
 .register-container{
     font-family: "Times New Roman", Times, serif;
 }
 h2 {
-   
     display: block;
     font-size: 1.5em;
     margin-block-start: 0.83em;
@@ -12,7 +14,6 @@ h2 {
     font-weight: bold;
 }
 h1 {
-    padding-left: 10%;
     display: block;
     font-size: 2em;
     margin-block-start: 0.67em;
@@ -28,9 +29,10 @@ th {
     text-align: -internal-center;
 }
 table {
-    padding-left: 5%;
-    padding-right: 5%;
     border-collapse: separate;
     text-indent: initial;
     border-spacing: 2px;
+}
+td{
+    font-weight: 500;
 }

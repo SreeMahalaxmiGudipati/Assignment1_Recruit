@@ -6,11 +6,11 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CrudoperationsComponent } from './crudoperations/crudoperations.component';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { ParentComponent } from './parent/parent.component';
 import { UserService } from './user.service';
+import { AddupdateComponent } from './addupdate/addupdate.component';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { UserService } from './user.service';
     ListComponent,
     HomeComponent,
     ParentComponent,
-    CrudoperationsComponent
+    AddupdateComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,49 @@
+<div class="Register-employee">
+    <br>
+    <h2>Add/Update Employee</h2><br>
+    <p class="text-center fs-3" [ngClass]="isAccountCreated ? 'text-success pb-1' : 'text-success pb-1'" >{{displayMsg}}</p>
+    <form [formGroup]="addupdateForm" (ngSubmit)="registerSubmitted()">
+      <table>
+         
+          <tr>
+              <td>UserName :</td>
+              <td>
+                  <input type="text" name="Name" formControlName="Name" >
+              </td>
+          </tr>
+          <tr>
+              <td>Contact No :</td>
+              <td>
+                  <input type="text" name="phone"  formControlName="Phone" >
+              </td>
+          </tr>
+          <tr>
+              <td>Recruit Status :</td>
+              <td>
+                  <input type="text"  name="recruitstatus" formControlName="recruitstatus" >
+              </td>
+          </tr>
+          <tr>
+            <td>Designation :</td>
+            <td>
+                <input type="text"  name="designation" formControlName="designation" >
+            </td>
+        </tr>
+        <tr>
+          <td>Experience (years) :</td>
+          <td>
+              <input type="text" name="experiencenoofyears" formControlName="experiencenoofyears" >
+          </td>
+      </tr>
+      
+          <tr>
+              <td>&nbsp;</td>
+              <td>
+                  <button type="submit" value="SAVE" class="btn btn-primary">SAVE</button>
+                  <br><br>
+                 
+              </td>
+          </tr>
+      </table>
+      </form>
+  </div>

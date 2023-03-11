@@ -19,5 +19,21 @@ export class UserService {
  DeleteStudent(id:any) : Observable<Employee[]>  {
   return this.http.delete<Employee[]>(this.baseUrl+'/'+id);
  }
+ 
+
+ registerUser(user:Array<String>)
+ {
+   return this.http.post(this.baseUrl ,{
+     Name:user[0],
+     Phone:user[1],
+     RecruitStatus:user[2],
+     Designation:user[3],
+     experiencenoofyears:user[4]
+     
+   },
+   {
+     responseType:'text',
+   });
+ }
 
 }
