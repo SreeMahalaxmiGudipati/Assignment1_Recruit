@@ -75,6 +75,22 @@ export class ListComponent implements OnInit{
     this.data.sort(this.sortByID);
    }
 
+   sortByName(a: any, b: any) {
+    const Aname=a.name.toLowerCase();
+    const Bname=b.name.toLowerCase();
+    if (Aname < Bname) {
+      return -1;
+    }
+    if (Aname > Bname) {
+      return 1;
+    }
+    return 0;
+  }
+
+  OnSortByName()
+   {
+    this.data.sort(this.sortByName);
+   }
    
 
 }

@@ -3,8 +3,8 @@
     <div class="SortByValue">
       <h5>Sort By : </h5>
     <button class="sortBy" id="btn1" (click)="OnSortByID()">ID</button>
-    <button class="sortBy" id="btn2">Name</button>
-    <button class="sortBy" id="btn3">Experience</button>
+    <button class="sortBy" id="btn2" (click)="OnSortByName()">Name</button>
+    <button class="sortBy" id="btn3" >Experience</button>
     <button class="sortBy" id="btn4">Status</button>
     <button class="searchbtton" (click)="onSearch()">Search</button>
     <input type="text" [(ngModel)]="searchValue"  placeholder="Search...">
