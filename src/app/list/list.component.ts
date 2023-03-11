@@ -45,6 +45,7 @@ export class ListComponent implements OnInit{
     this.router.navigate(['/parent/addupdate/'+id]);
   }
 
+  //filtering data with search value
   filterEmployees() {
     this.data= this.data.filter((employee: { name: string; phone: string; recruitstatus: string; designation: string; experiencenoofyears: string; }) =>
     employee.name.toLowerCase().includes(this.searchValue.toLowerCase())
@@ -59,6 +60,7 @@ export class ListComponent implements OnInit{
     this.filterEmployees();
   }
  
+  //sorting data by ID
   sortByID(a:any,b:any)
   {
       if(a.id<b.id){
@@ -75,6 +77,7 @@ export class ListComponent implements OnInit{
     this.data.sort(this.sortByID);
    }
 
+   //sorting data by name
    sortByName(a: any, b: any) {
     const Aname=a.name.toLowerCase();
     const Bname=b.name.toLowerCase();
@@ -92,5 +95,22 @@ export class ListComponent implements OnInit{
     this.data.sort(this.sortByName);
    }
    
+   //sorting data by STATUS
+   sortByStatus(a: any, b: any) {
+    const Astatus=a.recruitstatus.toLowerCase();
+    const Bstatus=b.recruitstatus.toLowerCase();
+    if (Astatus < Bstatus) {
+      return -1;
+    }
+    if (Astatus > Bstatus) {
+      return 1;
+    }
+    return 0;
+  }
+
+  OnSortByStatus()
+   {
+    this.data.sort(this.sortByStatus);
+   }
 
 }
