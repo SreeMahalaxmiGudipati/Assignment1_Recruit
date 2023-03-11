@@ -34,7 +34,6 @@ export class ListComponent implements OnInit{
   DeleteStudentinfo(id:any){
     this.userservice.DeleteStudent(id).subscribe((data:any)=>
     {
-      // console.log(data);
     this.toastr.error('User deleted successfully');
     this.getData(); 
     })

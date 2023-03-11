@@ -1,31 +1,18 @@
 .register-container{
     font-family: "Times New Roman", Times, serif;
 }
-h2 {
-   
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
 h1 {
     padding-left: 10%;
     display: block;
     font-size: 2em;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-weight: bold;
 }
 th {
     display: table-cell;
     vertical-align: inherit;
     font-weight: bold;
-    text-align: -internal-center;
 }
 table {
     padding-left: 5%;
@@ -59,13 +46,44 @@ input[type=text] {
     border-radius: 5px;
   }
 
-  .searchbtton{
-    float: right;
+.SortByValue{
+    display: flex;
+}
+
+.sortBy{
+      color:white;
+      font-size: 15px;
+      border-radius: 10px;
+      width: 70px;
+      background-color: darkorchid;
+      height: 40px;
+      border-color: darkorchid;
+  }
+  h5{
+    font-family: "Times New Roman", Times, serif;
+    padding-left: 5%;
+  }
+  #btn1{
+    margin-left: 2%;
+  }
+  #btn2{
+    margin-left: 1%;
+  }
+  #btn3{
+    width: 100px;
+    margin-left: 1%;
+  }
+  #btn4{
+    margin-left: 1%;
+  }
+.searchbtton{
+    
     color:white;
     background-color: green;
     font-size: 20px;
     margin-top: 3px;
-    margin-right: 100px;
+    margin-left:40%;
+    margin-right: 10px;
     border-radius: 10px;
     width: 100px;
     height: 40px;
