@@ -16,6 +16,16 @@ export class UserService {
   return this.http.get<Employee[]>(this.baseUrl);
  }
 
+ getDetailsById(id:any): Observable<Employee[]>  {
+  return this.http.get<Employee[]>(this.baseUrl+'/'+id);
+ }
+ 
+ UpdateStudent(student: Employee) : Observable<Employee[]>  {
+  console.log("service update entered");
+  console.log(student);
+  return this.http.put<Employee[]>(this.baseUrl+'/'+student.id,student);
+ }
+
  DeleteStudent(id:any) : Observable<Employee[]>  {
   return this.http.delete<Employee[]>(this.baseUrl+'/'+id);
  }

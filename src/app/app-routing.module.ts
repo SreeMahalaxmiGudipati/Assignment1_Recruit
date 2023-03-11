@@ -13,7 +13,9 @@ const routes: Routes = [
         {path:'parent/home',component:HomeComponent},
         {path:'parent/addupdate',component:AddupdateComponent},
         {path:'parent/list',component:ListComponent},
+        {path:'parent/addupdate/:id',component:AddupdateComponent}
       ]},
+      
   // {path:'home',component:HomeComponent},
   //      {path:'crudoperations',component:CrudoperationsComponent},
   //    {path:'list',component:ListComponent},

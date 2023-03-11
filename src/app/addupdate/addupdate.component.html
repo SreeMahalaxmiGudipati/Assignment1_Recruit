@@ -2,37 +2,37 @@
     <br>
     <h2>Add/Update Employee</h2><br>
     <p class="text-center fs-3" [ngClass]="isAccountCreated ? 'text-success pb-1' : 'text-success pb-1'" >{{displayMsg}}</p>
-    <form [formGroup]="addupdateForm" (ngSubmit)="registerSubmitted()">
+    <form [formGroup]="addupdateForm" (ngSubmit)="save()">
       <table>
          
           <tr>
               <td>UserName :</td>
               <td>
-                  <input type="text" name="Name" formControlName="Name" >
+                  <input type="text" name="Name" formControlName="Name" [(ngModel)]="employee.name">
               </td>
           </tr>
           <tr>
               <td>Contact No :</td>
               <td>
-                  <input type="text" name="phone"  formControlName="Phone" >
+                  <input type="text" name="phone"  formControlName="Phone" [(ngModel)]="employee.phone">
               </td>
           </tr>
           <tr>
               <td>Recruit Status :</td>
               <td>
-                  <input type="text"  name="recruitstatus" formControlName="recruitstatus" >
+                  <input type="text"  name="recruitstatus" formControlName="recruitstatus" [(ngModel)]="employee.recruitstatus">
               </td>
           </tr>
           <tr>
             <td>Designation :</td>
             <td>
-                <input type="text"  name="designation" formControlName="designation" >
+                <input type="text"  name="designation" formControlName="designation" [(ngModel)]="employee.designation">
             </td>
         </tr>
         <tr>
           <td>Experience (years) :</td>
           <td>
-              <input type="text" name="experiencenoofyears" formControlName="experiencenoofyears" >
+              <input type="text" name="experiencenoofyears" formControlName="experiencenoofyears" [(ngModel)]="employee.experiencenoofyears">
           </td>
       </tr>
       

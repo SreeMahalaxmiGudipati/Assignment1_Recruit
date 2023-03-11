@@ -34,3 +34,39 @@ table {
     text-indent: initial;
     border-spacing: 2px;
 }
+.status[data-status="Rejected"] {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .status[data-status="Accepted"] {
+    color: green;
+    font-weight: bold;
+  }
+
+  .status[data-status="Progress"] {
+    color: orange;
+    font-weight: bold;
+  }
+
+input[type=text] {
+    float: right;
+    padding: 6px;
+    margin-top: 3px;
+    margin-right: 10px;
+    border-color: black;
+    font-size: 17px;
+    border-radius: 5px;
+  }
+
+  .searchbtton{
+    float: right;
+    color:white;
+    background-color: green;
+    font-size: 20px;
+    margin-top: 3px;
+    margin-right: 100px;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+  }
