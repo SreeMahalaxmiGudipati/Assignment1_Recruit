@@ -3,11 +3,13 @@ import { Component, OnInit,Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+// import { OrderByPipe } from '@angular/common';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  styleUrls: ['./list.component.css'],
+ // providers: [OrderByPipe]
 })
 export class ListComponent implements OnInit{
   data:any;
@@ -56,4 +58,23 @@ export class ListComponent implements OnInit{
   onSearch() {
     this.filterEmployees();
   }
+ 
+  sortByID(a:any,b:any)
+  {
+      if(a.id<b.id){
+        return -1;
+      }
+      if(a.id < b.id){
+        return 1;
+      }
+      return 0;
+   }
+   
+   OnSortByID()
+   {
+    this.data.sort(this.sortByID);
+   }
+
+   
+
 }
