@@ -1,29 +1,43 @@
-import { Component, OnInit } from '@angular/core';
-import { Chart } from 'chart.js';
+import {  AfterViewInit, Component, OnInit } from '@angular/core';
+import Chart, { ChartItem } from 'chart.js/auto';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit{
- Linechart:any;
- ngOnInit()
- {
-  const chart = new Chart('linechart', {
-    type: 'line',
-    data: {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-      datasets: [
-        {
-          label: 'My First Dataset',
-          data: [65, 59, 80, 81, 56, 55, 40],
-          borderColor: 'rgb(255, 99, 132)',
-          fill: false,
-        },
-      ],
-    },
-    options: {},
-  });
- }
+
+export class HomeComponent implements AfterViewInit {
+  
+  ngAfterViewInit() {
+
+    const canvas = document.getElementById('myChart') as HTMLCanvasElement;
+    const chart = new Chart(canvas, {
+      type: 'bar',
+      data: {
+        labels: ['STATUS'],
+        datasets: [
+          {
+            label: 'Accepted',
+            backgroundColor: 'green',
+            data: [20]
+          },
+          {
+            label: 'Progress',
+            backgroundColor: 'orange',
+            data: [10]
+          },
+          {
+            label: 'Rejected',
+            backgroundColor: 'red',
+            data: [30]
+          }
+        ]
+      },
+    });
+
+    // chart.data.datasets[0].data = [];
+    // chart.update();
+  }
+
 }
