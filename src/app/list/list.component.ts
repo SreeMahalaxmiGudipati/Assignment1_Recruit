@@ -17,19 +17,7 @@ export class ListComponent implements OnInit{
   items: any;
   statusCounts!: { Accepted: number; Rejected: number; Progress: number; };
 
-  @Output() numbersEvent = new EventEmitter<number[]>();
-  number1: number = 1;
-  number2: number = 2;
-  number3: number = 3;
-
-  emitNumbers() {
-    const numbers = [this.number1, this.number2, this.number3];
-    this.numbersEvent.emit(numbers);
-    console.log(numbers);
-  }
-
   constructor(private userservice:UserService,private toastr:ToastrService,private router:Router){
-    // this. emitNumbers();
     this.getData();
     this.getcounts();
    }
@@ -44,7 +32,9 @@ export class ListComponent implements OnInit{
     for (let item of data) {
       counts[item.recruitstatus as 'Accepted' | 'Rejected' | 'Progress']++;
     }
-    console.log(counts);
+    //sending status count data to service
+    this.userservice.myData1 = counts;
+    console.log(this.userservice.myData1);
     return counts;
   }
 
@@ -53,9 +43,9 @@ export class ListComponent implements OnInit{
     this.userservice.getAllStudents().subscribe((data) => {
       this.statusCounts = this.countStatus(data);
     });
-    console.log(this.statusCounts);
   }
  
+  //retriveing all data from webapi
   getData()
   {
     this.userservice.getAllStudents().subscribe((data: any)=>
