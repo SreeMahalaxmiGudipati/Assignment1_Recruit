@@ -8,6 +8,8 @@ import { Employee } from 'src/models/employee.model';
 })
 export class UserService {
 
+  public myData1!: { Accepted: number; Rejected: number; Progress: number; };
+
   private baseUrl ="http://localhost:5052/api/Employee";
   constructor(private http:HttpClient) { }
 
