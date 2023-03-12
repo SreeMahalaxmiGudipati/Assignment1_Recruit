@@ -6,8 +6,8 @@ import { ListComponent } from './list/list.component';
 import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
- {path:'',component:HomeComponent},
- {path:'parent',component:HomeComponent},
+ {path:'',redirectTo: '/parent/list', pathMatch: 'full'},
+ {path:'parent',component:ListComponent},
   {path:'',
       children:[
         {path:'parent/home',component:HomeComponent},
