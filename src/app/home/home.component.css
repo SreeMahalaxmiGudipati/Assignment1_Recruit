@@ -15,3 +15,18 @@ h3{
 .textchartt{
     padding-left: 4%;
 }
+.displaycount{
+    display:flex;
+    padding-left: 40%;
+}
+.accepteddisplay{
+    color:green
+}
+.progressdisplay{
+    padding-left: 2%;
+    color:orange;
+}
+.rejecteddisplay{
+    padding-left: 2%;
+    color:red;
+}
