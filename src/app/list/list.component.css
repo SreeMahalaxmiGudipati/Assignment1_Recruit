@@ -1,6 +1,9 @@
 .register-container{
     font-family: "Times New Roman", Times, serif;
 }
+p{
+  font-family: "Times New Roman", Times, serif;
+}
 h1 {
     padding-left: 10%;
     display: block;

@@ -1,4 +1,4 @@
-import {  AfterViewInit, Component, OnInit } from '@angular/core';
+import {  AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import Chart, { ChartItem } from 'chart.js/auto';
 
 @Component({
@@ -8,9 +8,11 @@ import Chart, { ChartItem } from 'chart.js/auto';
 })
 
 export class HomeComponent implements AfterViewInit {
+
+  @Input() numbers: any;
   
   ngAfterViewInit() {
-
+    console.log(this.numbers);
     const canvas = document.getElementById('myChart') as HTMLCanvasElement;
     const chart = new Chart(canvas, {
       type: 'bar',
