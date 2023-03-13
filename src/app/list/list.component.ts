@@ -3,13 +3,8 @@ import { Component, OnInit} from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { Pipe, PipeTransform } from '@angular/core';
 import { Employee } from 'src/models/employee.model';
 // import { OrderByPipe } from '@angular/common';
-
-
-
-
 
 @Component({
   selector: 'app-list',
@@ -17,7 +12,6 @@ import { Employee } from 'src/models/employee.model';
   styleUrls: ['./list.component.css'],
  // providers: [OrderByPipe]
 })
-
 
 export class ListComponent implements OnInit{
  
@@ -35,9 +29,7 @@ export class ListComponent implements OnInit{
     throw new Error('Method not implemented.');
   }
 
-  
-  
-
+    // filter() method to filter data
   //  ngOnInit(): void {
   //   this.filterEmployees();
   // }
@@ -84,7 +76,7 @@ export class ListComponent implements OnInit{
     this.router.navigate(['/parent/addupdate/'+id]);
   }
 
-  //filtering data with search value
+  //filtering data with search value(another method)
   // filterEmployees() {
   //   this.data= this.data.filter((employee: { name: string; phone: string; recruitstatus: string; designation: string; experiencenoofyears: string; }) =>
   //   employee.name.toLowerCase().includes(this.searchValue.toLowerCase())
