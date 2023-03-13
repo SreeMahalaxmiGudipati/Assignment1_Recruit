@@ -19,11 +19,12 @@ export class FilterPipe implements PipeTransform{
             {
                 return employee.filter((employee) => 
                  {
-                    return employee.recruitstatus.toLowerCase() === searchValue.toLowerCase() 
-                    || employee.name.toLowerCase() === searchValue.toLowerCase()
-                    || employee.designation.toLowerCase() === searchValue.toLowerCase()
-                    || employee.experiencenoofyears.toLowerCase() === searchValue.toLowerCase()
-                    || employee.phone.toLowerCase() === searchValue.toLowerCase()
+                    return employee.recruitstatus.toLowerCase().includes(searchValue.toLowerCase())  
+                    || employee.name.toLowerCase().includes(searchValue.toLowerCase())
+                  //  || employee.designation.toLowerCase() === searchValue.toLowerCase()
+                  || employee.designation.toLowerCase().includes(searchValue.toLowerCase())
+                    || employee.experiencenoofyears.toLowerCase().includes(searchValue.toLowerCase())
+                    || employee.phone.toLowerCase().includes(searchValue.toLowerCase())
                 })
             }
     }
