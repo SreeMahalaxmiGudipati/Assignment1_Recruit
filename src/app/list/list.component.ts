@@ -1,9 +1,15 @@
 import { UserService } from '../user.service';
-import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+import { Pipe, PipeTransform } from '@angular/core';
+import { Employee } from 'src/models/employee.model';
 // import { OrderByPipe } from '@angular/common';
+
+
+
+
 
 @Component({
   selector: 'app-list',
@@ -11,20 +17,31 @@ import { Router } from '@angular/router';
   styleUrls: ['./list.component.css'],
  // providers: [OrderByPipe]
 })
+
+
 export class ListComponent implements OnInit{
+ 
   data:any;
-  searchValue: string = '';
-  items: any;
+  searchValue:  string = '';
+  employee!: Employee[];
   statusCounts!: { Accepted: number; Rejected: number; Progress: number; };
+
 
   constructor(private userservice:UserService,private toastr:ToastrService,private router:Router){
     this.getData();
     this.getcounts();
    }
-
-   ngOnInit(): void {
-    this.filterEmployees();
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
+
+  
+  
+
+  //  ngOnInit(): void {
+  //   this.filterEmployees();
+  // }
+
 
   //counting status for Accepted,rejected,Progress
   private countStatus(data: any[]): { Accepted: number, Rejected: number, Progress: number } {
@@ -68,19 +85,19 @@ export class ListComponent implements OnInit{
   }
 
   //filtering data with search value
-  filterEmployees() {
-    this.data= this.data.filter((employee: { name: string; phone: string; recruitstatus: string; designation: string; experiencenoofyears: string; }) =>
-    employee.name.toLowerCase().includes(this.searchValue.toLowerCase())
-      || employee.phone.toString().includes(this.searchValue)
-      || employee.recruitstatus.toLowerCase().includes(this.searchValue.toLowerCase())
-      || employee.designation.toLowerCase().includes(this.searchValue.toLowerCase())
-      || employee.experiencenoofyears.toString().includes(this.searchValue)
-    );
-  }
+  // filterEmployees() {
+  //   this.data= this.data.filter((employee: { name: string; phone: string; recruitstatus: string; designation: string; experiencenoofyears: string; }) =>
+  //   employee.name.toLowerCase().includes(this.searchValue.toLowerCase())
+  //     || employee.phone.toString().includes(this.searchValue)
+  //     || employee.recruitstatus.toLowerCase().includes(this.searchValue.toLowerCase())
+  //     || employee.designation.toLowerCase().includes(this.searchValue.toLowerCase())
+  //     || employee.experiencenoofyears.toString().includes(this.searchValue)
+  //   );
+  // }
 
-  onSearch() {
-    this.filterEmployees();
-  }
+  // onSearch() {
+  //   this.filterEmployees();
+  // }
  
   //sorting data by ID
   sortByID(a:any,b:any)
