@@ -41,10 +41,8 @@ table {
   }
 
 input[type=text] {
-    float: right;
+    margin-left: 39%;
     padding: 6px;
-    margin-top: 3px;
-    margin-right: 10px;
     border-color: black;
     font-size: 17px;
     border-radius: 5px;
@@ -61,7 +59,7 @@ input[type=text] {
       width: 70px;
       background-color: darkorchid;
       height: 40px;
-      border-color: darkorchid;
+      border-color: black;
   }
   h5{
     font-family: "Times New Roman", Times, serif;
@@ -80,7 +78,7 @@ input[type=text] {
   #btn4{
     margin-left: 1%;
   }
-.searchbtton{
+/* .searchbtton{
     
     color:white;
     background-color: green;
@@ -91,4 +89,4 @@ input[type=text] {
     border-radius: 10px;
     width: 100px;
     height: 40px;
-  }
+  } */
