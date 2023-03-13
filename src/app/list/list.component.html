@@ -7,7 +7,7 @@
     <button class="sortBy" id="btn2" (click)="OnSortByName()">Name</button>
     <button class="sortBy" id="btn3" (click)="OnSortByExpereince()">Experience</button>
     <button class="sortBy" id="btn4" (click)="OnSortByStatus()">Status</button>
-    <button class="searchbtton" (click)="onSearch()">Search</button>
+    <!-- <button class="searchbtton" (click)="onSearch()">Search</button> -->
     <input type="text" [(ngModel)]="searchValue"  placeholder="Search...">
   </div>
     <br>
@@ -27,7 +27,7 @@
         </thead>
     
         <tbody>
-                <tr *ngFor="let StudentItem of data; let j=index">
+                <tr *ngFor="let StudentItem of data | filterEmployee : searchValue">
                    <td>{{StudentItem.id}}</td>
                     <td>{{ StudentItem.name }}</td>
                     <td>{{ StudentItem.phone }}</td>
