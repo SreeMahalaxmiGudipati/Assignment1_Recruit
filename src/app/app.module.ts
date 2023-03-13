@@ -11,6 +11,7 @@ import { ListComponent } from './list/list.component';
 import { ParentComponent } from './parent/parent.component';
 import { UserService } from './user.service';
 import { AddupdateComponent } from './addupdate/addupdate.component';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AddupdateComponent } from './addupdate/addupdate.component';
     ListComponent,
     HomeComponent,
     ParentComponent,
-    AddupdateComponent
+    AddupdateComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
